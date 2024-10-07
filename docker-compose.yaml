@@ -1,0 +1,9 @@
+services:
+  cassandra:
+    image: cassandra:latest
+    container_name: cassandra
+    ports:
+      - "9042:9042"  # Port par défaut pour les requêtes CQL
+      - "7000:7000"  # Port pour la communication intra-cluster
+      - "7001:7001"  # Port pour la communication intra-cluster sécurisée
+      - "7199:7199"  # Port pour JMX
